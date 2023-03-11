@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+
+    overflow-x: hidden;
+    // background: blue;
+}
+
+.container {
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    // border: 2px solid green;
+
+    @include for-esm {
+        max-width: 400px;
+    }
+
+    @include for-sm {
+        max-width: 540px;
+    }
+
+    @include for-md {
+        max-width: 720px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @include for-lg {
+        max-width: 960px;
+    }
+
+    @include for-xl {
+        max-width: 1140px;
+    }
+}
+
+.absolute-block {
+    position: absolute;
+    width: 100%;
+}
+
+.header {
+    h1 {
+       font-size: 75px; 
+    }
+    color: $primary-color;
+    font-family: $heading-font;
+}
+
+.paragraph {
+    p {
+       font-size: 20px; 
+    }
+    color: $primary-color;
+    font-family: $heading-font;
+}
+
+.button {
+    font-size: 20px;
+    color: $primary-color;
+    font-family: $heading-font;
+    background-color: $red-color;
+
+    padding: 25px 70px;
+
+    border-radius: 8px;
+
+    width: fit-content;
+
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}

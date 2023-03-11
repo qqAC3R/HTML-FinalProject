@@ -1,0 +1,55 @@
+.description-block {
+    // margin-top: 100px;
+
+    position: relative;
+
+    width: 100%;
+    // min-height: 1000px;
+    background-color: white;
+
+    z-index: 4;
+}
+
+.description-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 60px;
+}
+
+.description-block-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    gap: 50px;
+
+    @include for-md {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+.description-block-padding {
+    padding: 80px 0;
+}
+
+.description-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.description-content-header {
+    font-size: 25px;
+    font-family: $heading-font;
+}
+
+.description-content-paragraph {
+    font-size: 13px;
+    font-family: $text-font;
+    color: $second-color;
+    text-align: center;
+}

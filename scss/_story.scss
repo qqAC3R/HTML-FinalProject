@@ -1,0 +1,162 @@
+.story-block {
+    position: relative;
+    z-index: 4;
+    background-color: #fbfbfb;
+}
+
+.story-block-padding {
+    padding: 90px 0;
+}
+
+.story-block-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.story-block-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        font-size: 30px; 
+        font-family: $heading-font;
+        color: black;
+
+        margin: 5px 0;
+    }
+
+    p {
+        font-family: $text-font;
+        color: $second-color;
+        font-size: 15px; 
+    }
+}
+
+.story-block-project {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #cecece;
+
+    @include for-lg {
+        flex-direction: row;
+    }
+
+    
+
+    .story-block-project-img {
+        width: 100%;
+
+        @include for-lg {
+            width: 40%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+    }
+
+    .story-block-project-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        padding-left: 30px;
+        padding-bottom: 15px;
+        h3 {
+            font-size: 20px; 
+            font-family: $heading-font;
+            color: black;
+        }
+
+        p {
+            font-size: 15px; 
+            font-family: $text-font;
+            color: $second-color;
+        }
+    }
+
+    .story-block-project-button {
+        font-size: 15px;
+        color: $primary-color;
+        font-family: $heading-font;
+        background-color: $red-color;
+
+        padding: 20px 50px;
+
+        border-radius: 8px;
+
+        width: fit-content;
+
+    }
+}
+
+.story-block-photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .story-block-photo {
+        width: 100%;
+        overflow: hidden;
+        height: 250px;
+
+        @include for-sm {
+            width: calc(50% - 20px);
+        }
+
+        @include for-lg {
+            width: calc(33% - 20px);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+}
+
+.story-block-photo {
+    position: relative;
+}
+
+.story-block-photo-hover {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    background-color: rgba(17, 26, 83, 0.7);
+    transition: opacity 0.3s ease-in-out;
+
+    opacity: 0;
+    &:hover {
+        opacity: 1;
+    }
+
+    .story-block-photo-button {
+        font-size: 20px;
+        color: $primary-color;
+        font-family: $heading-font;
+        background-color: $red-color;
+
+        padding: 20px 30px;
+
+        border-radius: 8px;
+
+        width: fit-content;
+    }
+
+
+}

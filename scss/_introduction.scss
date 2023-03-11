@@ -1,0 +1,50 @@
+.introduction-block {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.introduction-background {
+    position: absolute;
+    transform: translateZ(-10px) scale(3);
+    
+    width: 100%;
+    height: 100%;
+
+    filter: brightness(80%);
+
+    
+    background-image: url("../images/introduction.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+    z-index: 0;
+}
+
+
+.introduction-content {
+    transform: translateZ(-1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+
+    min-height: calc(100% - 20%);
+    z-index: 1;
+}
+
+.introduction-text-glow {
+    text-shadow: 0px 0px 10px white, 0px 0px 10px white;
+    text-align: center;
+}
